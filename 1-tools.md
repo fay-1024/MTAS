@@ -33,11 +33,11 @@ for i in range(0, len(dataset)):
 The codes for generating follow-up test cases are stored in `mr` directory.
 
 **Main Executable Components:**
-* `mr1-1.py`: MR<sub>1-1</sub> constructs follow-up inputs by coreference resolution. Its inputs are source documents.
-* `mr2-1.py`: MR<sub>2-1</sub> constructs follow-up inputs by emphasizing key sentence. Its inputs are source documents and summaries.
-* `mr2-2.py`: MR<sub>2-2</sub> constructs follow-up inputs by restructuring key sentence. Its inputs are source documents and summaries.
-* `mr-syn.py`: MR<sub>w-syn</sub> is designed for word-level perturbations. its inputs are source documents.
-* `mr-adv.py`: MR<sub>s-adv</sub> is designed for sentence-level perturbations. its inputs are source documents.
+* `mr_coreference.py`: MR<sub>1-1</sub> constructs follow-up inputs by coreference resolution. Its inputs are source documents.
+* `mr_emphasizing.py`: MR<sub>2-1</sub> constructs follow-up inputs by emphasizing key sentence. Its inputs are source documents and summaries.
+* `mr_restructuring.py`: MR<sub>2-2</sub> constructs follow-up inputs by restructuring key sentence. Its inputs are source documents and summaries.
+* `mr_syn.py`: MR<sub>w-syn</sub> is designed for word-level perturbations. its inputs are source documents.
+* `mr_adv.py`: MR<sub>s-adv</sub> is designed for sentence-level perturbations. its inputs are source documents.
 
 **To automate the generation of follow-up inputs, we employed several text processing tools:**
 * `NeuralCoref`, a coreference resolution tool: <https://github.com/huggingface/neuralcoref>
