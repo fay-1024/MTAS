@@ -80,8 +80,30 @@ In our experiments, if the value of SCY is less than 0.5, the source summary and
 * `Sense2vec`: we utilize Sense2vec to map tokens into vector spaces. You can get the sense2vec model by <https://github.com/explosion/sense2vec>
 * `Deberta-v3`: we use this state-of-the-art natural language inference model for factual consistency analysis. The model can be downloaded via <https://huggingface.co/tomhosking/deberta-v3-base-debiased-nli>
 
+**The code for calculating the violation rate using the SCY metric is as follows:**
 
+```python
+import json
+from metric.SCY import SCY
 
+dataset = []
+file_path = "t5_mr_coreference_out.jsonl"
+with open(file_path, 'r', encoding='utf-8') as f:
+    for line in f:
+        dataset.append(json.loads(line))
+total_count = len(dataset)
+violation_count = 0
+scy_metric = SCY()
+for i in range(0, total_count):
+    source_out = dataset[i]["source_out"]
+    follow_out = dataset[i]["follow_out"]
+    scy_score = scy_metric.get_scy_score(source_out, follow_out)
+    if scy_score < 0.5:
+        violation_count += 1
+        
+violation_rate = violation_count / total_count
+print(violation_rate)
+```
 
 
 
