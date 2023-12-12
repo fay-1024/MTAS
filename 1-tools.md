@@ -4,7 +4,7 @@ We implement MTAS with a set of Python scripts. It is used to generate the follo
 
 ---
 
-### Abstractive Summarization Models Under Test
+### 1. Abstractive Summarization Models Under Test
 Our experiments employ three state-of-the-art pre-trained language generation models that have been fine-tuned for the task of abstractive text summarization: BART, Pegasus and T5. All the models are released with detailed configurations on Hugging Face.
 * BART: <https://huggingface.co/facebook/bart-large-xsum>
 * Pegasus: <https://huggingface.co/google/pegasus-xsum>
@@ -28,17 +28,22 @@ for i in range(0, len(dataset)):
     print(summary)
 ```
 
-### Follow-up Test Cases Generation
+### 2. Follow-up Test Cases Generation
 
-All the codes for generating follow-up test cases are stored in `mr` directory
+The codes for generating follow-up test cases are stored in `mr` directory.
 
-* `mr1-1.py`: 
-* `mr2-1.py`:
-* `mr2-2.py`:
-* `mr-syn.py`:
-* `mr-adv.py`:
+**Main Executable Components:**
+* `mr1-1.py`: MR<sub>1-1</sub> constructs follow-up inputs by coreference resolution. Its inputs are source documents.
+* `mr2-1.py`: MR<sub>2-1</sub> constructs follow-up inputs by emphasizing key sentence. Its inputs are source documents and summaries.
+* `mr2-2.py`: MR<sub>2-2</sub> constructs follow-up inputs by restructuring key sentence. Its inputs are source documents and summaries.
+* `mr-syn.py`: MR<sub>w-syn</sub> is designed for word-level perturbations. its inputs are source documents.
+* `mr-adv.py`: MR<sub>s-adv</sub> is designed for sentence-level perturbations. its inputs are source documents.
 
-
+**To automate the generation of follow-up inputs, we employed several text processing tools:**
+* `NeuralCoref`, a coreference resolution tool: <https://github.com/huggingface/neuralcoref>
+* `Paraphrase Genius API`, a sentence paraphrasing tool:  <https://rapidapi.com/genius-tools-genius-tools-default/api/paraphrase-genius>
+* `Spacy`, an industrial-strength natural language processing toolkit:  <https://spacy.io/>
+* `Word Associations API`, a tool for obtaining synonyms:  <https://rapidapi.com/twinword/api/word-associations>
 
 
 
