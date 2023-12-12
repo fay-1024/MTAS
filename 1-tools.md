@@ -67,6 +67,23 @@ for i in range(0, len(dataset)):
     print(follow_document)
 ```
 
+### 3. Summary Consistency (SCY) Metric
+The last step of MTAS is to analyze the consistency between the source and follow-up summaries. Existing evaluation metrics adopted in AS evaluation mainly focus on word-level analysis, neglecting the overall semantics and factual information. To overcome this limitation, we propose a new metric, named summary consistency (SCY), for reflecting the degree of consistency between two summaries.
+
+**Input:** the source summary and follow-up summary.
+
+**Output:** a consistency score between 0 and 1.
+
+In our experiments, if the value of SCY is less than 0.5, the source summary and follow-up summaries are considered inconsistent.
+
+
+
+
+
+
+
+
+
 
 
 
