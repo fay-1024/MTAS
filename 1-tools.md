@@ -32,7 +32,7 @@ for i in range(0, len(dataset)):
 
 All the codes for generating follow-up test cases are stored in `mr` directory
 
-* `mr1-1.py`:
+* `mr1-1.py`: 
 * `mr2-1.py`:
 * `mr2-2.py`:
 * `mr-syn.py`:
