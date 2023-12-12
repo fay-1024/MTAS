@@ -77,8 +77,8 @@ The last step of MTAS is to analyze the consistency between the source and follo
 In our experiments, if the value of SCY is less than 0.5, the source summary and follow-up summaries are considered inconsistent.
 
 **Key components of SCY:**
-
-
+* `Sense2vec`: we utilize Sense2vec to map tokens into vector spaces. You can get the sense2vec model by <https://github.com/explosion/sense2vec>
+* `Deberta-v3`: we use this state-of-the-art natural language inference model for factual consistency analysis. The model can be downloaded via <https://github.com/jimmycode/gen-debiased-nli>
 
 
 
