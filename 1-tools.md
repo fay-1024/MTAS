@@ -45,8 +45,27 @@ The codes for generating follow-up test cases are stored in `mr` directory.
 * `Spacy`, an industrial-strength natural language processing toolkit:  <https://spacy.io/>
 * `Word Associations API`, a tool for obtaining synonyms:  <https://rapidapi.com/twinword/api/word-associations>
 
-
-
+**The following is an example of using MR<sub>2-1</sub> to construct follow-up inputs:**
+```python
+import json
+from model.get_summary import Models
+from mr.mr_emphasizing import MR2_1
+dataset = []
+file_path = "xsum_validation_data.jsonl"
+with open(file_path, 'r', encoding='utf-8') as f:
+    for line in f:
+        dataset.append(json.loads(line))
+model = Models()
+MR = MR2_1()
+for i in range(0, len(dataset)):
+    document = dataset[i]["doc"]
+    summary = model.get_pegasus_summary(document)
+    key_sentence = MR.get_most_rel_sen(document, summary)
+    rephrased_key_sentence = MR.get_rephrased_sen(key_sentence)
+    insert_sen = key_sentence + "\nThat is, " + summary[:1].lower() + summary[1:]
+    follow_document = document.replace(key_sentence, insert_sen)
+    print(follow_document)
+```
 
 
 
