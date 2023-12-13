@@ -38,12 +38,14 @@ for i in range(0, len(dataset)):
 
 In our experiment, we select source inputs from the dev split of XSum and Newsroom datasets.
 
+* `xsum_dev.jsonl`: 
+* `newsroom_validation_data.jsonl`: Detailed information on this dataset can be found at <https://github.com/artidoro/frank>.
 
 
 #### SCY Evaluation Datasets
 
-* `sts.json`: Semantic Textual Similarity (STS) corpus. We use this dataset to evaluate the semantic comprehension of SCY.
-* `frank.json`: We use this dataset to evaluate SCY's ability to recognize factual inconsistencies. Detailed information on this dataset can be found at <https://github.com/artidoro/frank>.
+* `sts.jsonl`: Semantic Textual Similarity (STS) corpus. We use this dataset to evaluate the semantic comprehension of SCY.
+* `frank.jsonl`: We use this dataset to evaluate SCY's ability to recognize factual inconsistencies. Detailed information on this dataset can be found at <https://github.com/artidoro/frank>.
 
 
 
