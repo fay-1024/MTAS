@@ -38,8 +38,8 @@ for i in range(0, len(dataset)):
 
 In our experiment, we select source inputs from the dev split of XSum and Newsroom datasets.
 
-* `xsum_dev.jsonl`: 
-* `newsroom_validation_data.jsonl`: Detailed information on this dataset can be found at <https://github.com/artidoro/frank>.
+* `xsum_dev.jsonl`: Detailed information on this dataset can be found at <https://github.com/EdinburghNLP/XSum>.
+* `newsroom_validation_data.jsonl`: Detailed information on this dataset can be found at <https://lil.nlp.cornell.edu/newsroom/>.
 
 
 #### SCY Evaluation Datasets
