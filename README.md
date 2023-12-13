@@ -8,3 +8,5 @@ Abstractive Summarization (AS) in Natural Language Processing has made great str
 #### This artifact contains:
 1. **Implementation and Usage Instruction of MTAS,**  the python scripts and the concrete instructions to generate the follow-up test cases and measure consistency with new metrics. (please refer to [1-tools.md](1-tools.md) for details)
 2. **Experiment Replication Package,** i.e., the instruction, codes, and data source for replicating the evaluation reported in the paper. (please refer to [2-replication.md](2-replication.md)  for details)
+
+The details of the experimental operating environment can be found in [requirements.txt](requirements.txt).
