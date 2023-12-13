@@ -2,9 +2,11 @@
 
 We provide the codes to replicate our experiment, including the pre-trained model being tested and all the data supporting the experiment.
 
----
 
-### Abstractive Summarization Models Under Test
+### 1. Abstractive Summarization Models Under Test
+
+All the codes for the experimental models are stored `model` directory.
+
 Our experiments employ three state-of-the-art pre-trained language generation models that have been fine-tuned for the task of abstractive text summarization: BART, Pegasus and T5. All the models are released with detailed configurations on Hugging Face.
 * BART: <https://huggingface.co/facebook/bart-large-xsum>
 * Pegasus: <https://huggingface.co/google/pegasus-xsum>
@@ -27,5 +29,14 @@ for i in range(0, len(dataset)):
     summary = model.get_bart_summary(document)
     print(summary)
 ```
+
+### 2. Data Source
+
+
+
+
+
+
+
 
 
