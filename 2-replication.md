@@ -32,13 +32,18 @@ for i in range(0, len(dataset)):
 
 ### 2. Data Source
 
+*All experimental data is stored in `data` directory.*
+
 #### Abstractive Summarization Datasets
 
 In our experiment, we select source inputs from the dev split of XSum and Newsroom datasets.
 
 
 
+#### SCY Evaluation Datasets
 
+* `sts.json`: Semantic Textual Similarity (STS) corpus. We use this dataset to evaluate the semantic comprehension of SCY.
+* `frank.json`: We use this dataset to evaluate SCY's ability to recognize factual inconsistencies. Detailed information on this dataset can be found at <https://github.com/artidoro/frank>.
 
 
 
