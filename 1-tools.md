@@ -4,7 +4,7 @@ We implement MTAS with a set of Python scripts. It is used to generate the follo
 
 ---
 
-### Follow-up Test Cases Generation
+### 1. Follow-up Test Cases Generation
 
 The codes for generating follow-up test cases are stored in `mr` directory.
 
@@ -44,7 +44,7 @@ for i in range(0, len(dataset)):
 ```
 ---
 
-### Summary Consistency (SCY) Metric
+### 2. Summary Consistency (SCY) Metric
 The last step of MTAS is to analyze the consistency between the source and follow-up summaries. Existing evaluation metrics adopted in AS evaluation mainly focus on word-level analysis, neglecting the overall semantics and factual information. To overcome this limitation, we propose a new metric, named summary consistency (SCY), for reflecting the degree of consistency between two summaries.
 
 **Input and Output:**
