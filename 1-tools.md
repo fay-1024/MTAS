@@ -72,7 +72,7 @@ The last step of MTAS is to analyze the consistency between the source and follo
 
 **Input and Output:**
 * Input: the source summary and follow-up summary.
-* Output: a consistency score between 0 and 1.
+* Output: a consistency score less than or equal to 1.
   
 In our experiments, if the value of SCY is less than 0.5, the source summary and follow-up summaries are considered inconsistent.
 
